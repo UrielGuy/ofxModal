@@ -26,15 +26,17 @@
 #include "ofGraphics.h"
 #include "ofxSmartFont.h"
 
+extern std::string exec_dir;
+
 class ofxModalTheme {
 
     public:
     
         ofxModalTheme(){
-            buttonX.normal.load("ofxbraitsch/ofxmodal/modal-buttonX.png");
-            buttonX.active.load("ofxbraitsch/ofxmodal/modal-buttonX-hover.png");
-            fonts.title = ofxSmartFont::add("ofxbraitsch/fonts/HelveticaNeueLTStd-Md.otf", 24, "modal-title");
-            fonts.message = ofxSmartFont::add("ofxbraitsch/fonts/Roboto-Regular.ttf", 20, "modal-message");
+            buttonX.normal.load(exec_dir + "modal-buttonX.png");
+            buttonX.active.load(exec_dir + "modal-buttonX-hover.png");
+            fonts.title = ofxSmartFont::add(exec_dir + "HelveticaNeueLTStd-Md.otf", 24, "modal-title");
+            fonts.message = ofxSmartFont::add(exec_dir + "Roboto-Regular.ttf", 20, "modal-message");
         }
     
     /*
